@@ -1,0 +1,29 @@
+body {
+  /* Colors base */
+  --color-white-base: 255, 255, 255;
+  --color-black-base: 0, 0, 0;
+  --color-gray-base: 128, 128, 128;
+  --color-pink-light-base: 255, 179, 186;
+  --color-orange-light-base: 255, 223, 186;
+  --color-yellow-light-base: 255, 255, 186;
+  --color-green-light-base: 186, 255, 201;
+  --color-blue-light-base: 186, 225, 255;
+  --color-violet-light-base: 208, 186, 255;
+  --color-purple-light-base: 255, 179, 255;
+  
+
+  /* Colors */
+  --color-white: rgb(var(--color-white-base));
+  --color-black: rgb(var(--color-black-base));
+  --color-gray: rgb(var(--color-gray-base));
+  --color-pink-light: rgb(var(--color-pink-light-base));
+  --color-orange-light: rgb(var(--color-orange-light-base));
+  --color-yellow-light: rgb(var(--color-yellow-light-base));
+  --color-green-light: rgb(var(--color-green-light-base));
+  --color-blue-light: rgb(var(--color-blue-light-base));
+  --color-violet-light: rgb(var(--color-violet-light-base));
+  --color-purple-light: rgb(var(--color-purple-light-base));
+
+  /* gradient */
+  --gradient: linear-gradient(var(--color-pink-light), var(--color-orange-light), var(--color-yellow-light), var(--color-green-light), var(--color-blue-light), var(--color-violet-light), var(--color-purple-light));
+}

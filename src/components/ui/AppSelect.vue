@@ -50,15 +50,7 @@ const selectOption = (option: Option) => {
 <style module>
 .root {
   border-radius: 10px;
-  background-image: linear-gradient(
-    #ffb3ba,
-    #ffdfba,
-    #ffffba,
-    #baffc9,
-    #bae1ff,
-    #d0baff,
-    #ffb3ff
-  );
+  background-image: var(--gradient);
 }
 .selected {
   display: flex;
@@ -66,7 +58,7 @@ const selectOption = (option: Option) => {
   justify-content: space-between;
   padding: 5px 10px;
   border-radius: 5px;
-  color: black;
+  color: var(--color-gray);
   user-select: none;
   cursor: pointer;
 }
@@ -85,8 +77,12 @@ const selectOption = (option: Option) => {
 }
 .option {
   padding: 5px 10px;
+  cursor: pointer;
+  color: var(--color-black);
+  border-top: 1px solid var(--color-gray);
 }
-.option:not(:first-child) {
-  border-top: 1px solid gray;
+.option:hover {
+  cursor: pointer;
+  opacity: 0.7;
 }
 </style>
