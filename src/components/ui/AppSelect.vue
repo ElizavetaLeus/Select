@@ -1,5 +1,5 @@
 <template>
-  <div :class="$style.root">
+  <div :class="$style.root" v-click-outside="closeSelect">
     <div :class="$style.selected" @click="isShown = !isShown">
       {{ selectedOption || placeholder }}
       <AppIcon name="arrow" :class="[$style.icon, isShown && $style.iconActive]"/>
@@ -44,6 +44,9 @@ const selectOption = (option: Option) => {
   selectedOption.value = option.name;
   isShown.value = false;
   emits('changeOption', option.id);
+};
+const closeSelect = () => {
+  isShown.value = false;
 };
 </script>
 
