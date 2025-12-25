@@ -1,0 +1,3 @@
+export const icons = {
+  arrow: '<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.66992 8.3501L10.0032 11.6834L13.3365 8.3501" stroke="#B3C1D1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+};

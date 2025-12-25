@@ -1,30 +1,40 @@
-<script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+  <div :class="$style.root">
+    <AppSelect
+      :class="$style.select"
+      :options="options"
+      @changeOption="console.log($event)"
+    />
   </div>
-  <HelloWorld msg="Vite + Vue" />
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+<script setup lang="ts">
+import AppSelect from '@/components/ui/AppSelect.vue';
+const options = [
+  { id: 1, name: 'Кристофер Бан Чан' },
+  { id: 2, name: 'Ли Мин Хо' },
+  { id: 3, name: 'Со Чан Бин' },
+  { id: 4, name: 'Хван Хен Джин' },
+  { id: 5, name: 'Хан Джи Сон' },
+  { id: 6, name: 'Ли Ен Бок' },
+  { id: 7, name: 'Ким Сын Мин' },
+  { id: 8, name: 'Ян Чон Ин' },
+];
+</script>
+<style module>
+.root {
+  background-image: url("@/assets/images/background-image.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  width: 100%;
+  display: flow-root;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+.select {
+  max-width: 400px;
+  margin-top: 40px;
+  margin-inline-start: 30px;
 }
 </style>
